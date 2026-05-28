@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boîte de réception</title>
+    <link rel="icon" href="media/logo.png" />
+    <link rel="stylesheet" href="./styles/reception/reception.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="media/logo.png" alt="logo" width="70px" />
+      <button class="deconnexion" scr="form.html">Déconnexion</button>
+    </header>
+
+    <div class="container" id="boite">
+      <div class="boite_header">
+        <input type="checkbox" class="checkall" />
+        <button class="actualiser">Actualiser</button>
+        <div class="option_div">
+          <button class="option">Options</button>
+          <div class="option_menu">
+            <button class="option_non_lu">Marquer comme non lu</button>
+            <button class="option_prio">Marquer comme prioritaire</button>
+            <button class="option_suppr">Supprimer</button>
+          </div>
+        </div>
+        <p class="title">Boîte de réception</p>
+      </div>
+      <div class="boite_subheader">
+        <hr />
+        <input type="button" class="principale" value="Principale" />
+        <input type="button" class="prioritaire" value="Prioritaire" />
+      </div>
+      <div class="liste_message"></div>
+    </div>
+
+    <div class="read" id="message">
+      <div class="boite_header">
+        <button class="retour">Retour</button>
+        <p class="title" id="header_lecture"></p>
+      </div>
+
+      <div class="lecture_message"></div>
+    </div>
+  </body>
+</html>
