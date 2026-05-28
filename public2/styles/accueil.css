@@ -1,0 +1,15 @@
+.logo {
+    display: block;
+        }
+
+h1 {
+        text-align: center;
+        color: #A29E95;
+        font-size: 50px;
+        margin-top: 50px;
+        -webkit-text-stroke: 1px #807F77;
+        }
+
+.footer2{
+    margin-left: 15px;
+}

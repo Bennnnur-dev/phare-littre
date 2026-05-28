@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boîte de réception</title>
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/reception.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="img/logo.png" alt="logo" width="70px">
+        <div style="display: flex; gap: 10px; margin-left: auto;">
+            <button class="bouton2" onclick="window.location.href='/formulaire'">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L21 7"/>
+                </svg>
+                Signaler un cas
+            </button>
+            <button class="bouton2" onclick="window.location.href='/logout'">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                </svg>
+                Se déconnecter
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">Boîte de réception</div>
+
+        <!-- Email 1 -->
+        <div class="email unread" onclick="toggle(this, 0)">
+            <span class="dot"></span>
+            <div class="avatar" style="background:#E1F5EE; color:#0F6E56;">AN</div>
+            <div class="email-body">
+                <div class="sender">Anonyme</div>
+                
+            </div>
+            <div class="meta">
+                <span class="date">26 avr</span>
+                <span class="heure">10:15</span>
+            </div>
+        </div>
+        <div class="view" id="msg-0">
+            <div class="view-inner">
+                <div class="view-back" onclick="close0(event)">← Retour</div>
+                <div class="view-from">De : Anonyme · 26 avr à 10:15</div>
+                <div class="view-sep"></div>
+                <div class="view-content">
+                    Bonjour,<br><br>
+                    Je me permets de vous contacter car j'ai récemment été victime d'une discrimination à cause de ma couleur de peau. Je souhaiterais en parler et comprendre quelles démarches je peux entreprendre.<br><br>
+                    Merci de me répondre dans les meilleurs délais.<br><br>
+                    Cordialement,<br>
+                    Anonyme
+                </div>
+            </div>
+        </div>
+
+        <!-- Email 2 -->
+        <div class="email unread" onclick="toggle(this, 1)">
+            <span class="dot"></span>
+            <div class="avatar" style="background:#E6F1FB; color:#185FA5;">BO</div>
+            <div class="email-body">
+                <div class="sender">Bob</div>
+                
+            </div>
+            <div class="meta">
+                <span class="date">25 avr</span>
+                <span class="heure">06:50</span>
+            </div>
+        </div>
+        <div class="view" id="msg-1">
+            <div class="view-inner">
+                <div class="view-back" onclick="close1(event)">← Retour</div>
+                <div class="view-from">De : Bob · 25 avr à 06:50</div>
+                <div class="view-sep"></div>
+                <div class="view-content">
+                    Bonjour,<br><br>
+                    Je me permets de vous contacter car j'ai récemment été victime d'une discrimination à cause de ma couleur de peau. Je souhaiterais en parler et comprendre quelles démarches je peux entreprendre.<br><br>
+                    Merci de me répondre dans les meilleurs délais.<br><br>
+                    Cordialement,<br>
+                    Bob
+                </div>
+            </div>
+        </div>
+
+        <!-- Email 3 -->
+        <div class="email unread" onclick="toggle(this, 2)">
+            <span class="dot"></span>
+            <div class="avatar" style="background:#F1EFE8; color:#5F5E5A;">C</div>
+            <div class="email-body">
+                <div class="sender">Cassandra</div>
+                
+            </div>
+            <div class="meta">
+                <span class="date">24 avr</span>
+                <span class="heure">09:00</span>
+            </div>
+        </div>
+        <div class="view" id="msg-2">
+            <div class="view-inner">
+                <div class="view-back" onclick="close2(event)">← Retour</div>
+            
+                <div class="view-from">De : Service Client · 24 avr à 09:00</div>
+                <div class="view-sep"></div>
+                <div class="view-content">
+                    Bonjour et bienvenue !<br><br>
+                    Je me permets de vous contacter car j'ai récemment été victime d'une discrimination à cause de ma couleur de peau. Je souhaiterais en parler et comprendre quelles démarches je peux entreprendre.<br><br>
+                    Merci de me répondre dans les meilleurs délais.<br><br>
+                    Cordialement,<br>
+                    Cassandra
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggle(row, id) {
+            var msg = document.getElementById('msg-' + id);
+            var isOpen = msg.classList.contains('open');
+            document.querySelectorAll('.view').forEach(function(v) { v.classList.remove('open'); });
+            document.querySelectorAll('.email').forEach(function(e) { e.style.background = ''; });
+            if (!isOpen) {
+                msg.classList.add('open');
+                row.classList.remove('unread');
+                row.style.background = '#f5f5f5';
+            }
+        }
+        function close0(e) { e.stopPropagation(); document.getElementById('msg-0').classList.remove('open'); document.querySelectorAll('.email')[0].style.background = ''; }
+        function close1(e) { e.stopPropagation(); document.getElementById('msg-1').classList.remove('open'); document.querySelectorAll('.email')[1].style.background = ''; }
+        function close2(e) { e.stopPropagation(); document.getElementById('msg-2').classList.remove('open'); document.querySelectorAll('.email')[2].style.background = ''; }
+    </script>
+
+</body>
+</html>
