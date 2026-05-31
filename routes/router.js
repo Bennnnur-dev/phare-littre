@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { postForm, deleteForm } = require("../controller/forms");
+const { postForm, getFormsPaginated } = require("../controller/forms");
 
-router.route("/").post(postForm).delete(deleteForm);
+router.route("/").post(postForm).get(getFormsPaginated);
 
 module.exports = router;

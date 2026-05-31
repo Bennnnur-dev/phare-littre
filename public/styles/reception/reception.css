@@ -1,204 +1,74 @@
-.container {
-  width: 800px;
-  margin: 20px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e8e8e8;
+body {
+  background-image: url("data:image/svg+xml,%3Csvg width='700' height='700' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-.read {
-  width: 800px;
-  margin: 20px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e8e8e8;
+main {
+  background-color: var(--prim);
+  box-shadow: var(--shad);
+  width: 40%;
+  margin: 4rem auto 8rem auto;
+  min-height: 40rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
-/* ─── BOITE HEADER ─────────────────────────────────────── */
-.boite_header {
-  background: #006b64;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.2px;
+#recep-header {
+  padding: 1rem;
+  border-bottom: solid rgb(230, 230, 230) 1px;
   display: flex;
-  align-items: center;
-  position: relative;
-  height: 48px;
-  gap: 12px;
 }
 
-.boite_header button {
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.15);
+.input-wrapper {
+  margin-left: auto;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+  border-radius: 0.5rem;
+  outline: none;
+  height: 1.9rem;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  display: flex;
+  padding-right: 3rem;
+}
+
+.input-wrapper svg {
+  width: 20px;
+  fill: var(--text);
+}
+
+.search-input {
+  outline: none;
+  background: none;
   border: none;
-  color: white;
-  padding: 4px 12px;
-  border-radius: 5px;
-  font-size: 13px;
+  height: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-.boite_header button:hover {
-  background: rgba(255, 255, 255, 0.25);
+input::placeholder {
+  opacity: 0.7;
 }
 
-.boite_header .checkall,
-.boite_header .actualiser,
-.boite_header .option {
-  flex-shrink: 0;
+#check-wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-.boite_header .option_div {
-  display: none;
-  position: relative;
+#check-wrapper label {
+  margin-right: 1rem;
+  color: var(--text);
+  font-weight: 600;
 }
 
-.option_menu button {
-  color: #333;
-  background: transparent;
-  display: block;
+#check-wrapper input {
+  margin-right: 0.5rem;
+  margin-top: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+#container {
+  overflow: hidden;
   width: 100%;
-  text-align: left;
-  padding: 6px 10px;
-  border-radius: 4px;
-}
-
-.option_menu button:hover {
-  background: #f0f0f0;
-  color: #333;
-}
-
-.option_menu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  padding: 8px;
-  z-index: 100;
-  column-gap: 12px;
-}
-
-.option_menu .option_non_lu,
-.option_menu .option_prio,
-.option_menu .option_suppr {
-  flex-shrink: 0;
-}
-
-.boite_header .title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-/* ─── BOITE SUBHEADER ──────────────────────────────────── */
-.boite_subheader {
-  background: #005a54;
-  color: white;
-  padding: 8px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.2px;
-  display: flex;
-  align-items: center;
-  /*gap: 12px;*/
-  gap: 8px;
-}
-
-.boite_subheader .principale {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.boite_subheader .prioritaire {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.boite_subheader .principale,
-.boite_subheader .prioritaire {
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  flex: 1;
-  padding: 4px 0;
-  text-align: center;
-}
-
-.boite_subheader .principale:hover,
-.boite_subheader .prioritaire:hover {
-  background: rgba(255, 255, 255, 0.25);
-}
-
-/* ─── BOITE PRINCIPALE ──────────────────────────────── */
-.boite_principale {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 11px 16px;
-  border-bottom: 1px solid #f0f0f0;
-  cursor: pointer;
-  background-color: white;
-  position: relative;
-}
-
-.boite_principale_lu {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 11px 16px;
-  border-bottom: 1px solid #f0f0f0;
-  cursor: pointer;
-  background-color: rgb(117, 117, 117);
-  position: relative;
-}
-
-.boite_principale:hover,
-.boite_principale_lu:hover {
-  background-color: #dddddd;
-}
-
-.boite_principale .user,
-.boite_principale_lu .user {
-  font-size: 14px;
-  color: #000000;
-  font-weight: 500;
-  flex: 1;
-  white-space: nowrap;
-}
-
-.boite_principale .horodatage,
-.boite_principale_lu .horodatage {
-  font-size: 13px;
-  color: #4a4a4a;
-  white-space: nowrap;
-  margin-left: auto;
-}
-
-.boite_principale .checkbox,
-.boite_principale_lu .checkbox {
-  flex-shrink: 0;
-}
-
-/* ─── LECTURE ─────────────────────────────────── */
-.read {
-  display: none;
-}
-
-.read .retour {
-  margin-left: auto;
-}
-
-.read .message {
-  padding: 14px 20px;
 }

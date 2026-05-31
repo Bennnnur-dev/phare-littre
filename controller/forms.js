@@ -1,7 +1,6 @@
 const Form = require("../db/FormSchema");
 
 async function postForm(req, res, next) {
-  //créer dans la base de donnée un exemplaire de formulaire reçu
   try {
     console.log(req.body);
     const { data } = req.body;
@@ -13,12 +12,17 @@ async function postForm(req, res, next) {
   }
 }
 
-async function deleteForm(req, res, next) {
-  //supprimer dans la base de donnée un exemplaire de formulaire reçu
+async function getFormsPaginated(req, res, next) {
   try {
-    const { id } = req.params;
-    const form = await Form.findByIdAndDelete(id);
-    res.status(201).json({ res: form });
+    const after = req.query.after;
+    const query = after ? { _id: { $gt: after } } : {};
+    const forms = await Form.find(query).limit(10).sort({ _id: 1 });
+    const lastItem = forms[forms.length - 1];
+
+    res.status(200).json({
+      data: forms,
+      nextCursor: lastItem?._id ?? null,
+    });
   } catch (err) {
     next(err);
   }
@@ -26,5 +30,5 @@ async function deleteForm(req, res, next) {
 
 module.exports = {
   postForm,
-  deleteForm,
+  getFormsPaginated,
 };
