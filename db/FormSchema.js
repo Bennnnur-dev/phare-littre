@@ -26,4 +26,4 @@ const schema = new mongoose.Schema(
   { timestamps: true },
 );
 
-module.exports = mongoose.model("forms", schema);
+module.exports = mongoose.model("Forms", schema);

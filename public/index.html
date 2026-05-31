@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/home/hero.css" />
+    <link rel="stylesheet" href="./styles/home/about.css" />
+    <link rel="stylesheet" href="./styles/home/info.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,23 +20,144 @@
   <body>
     <header>
       <a href="/" id="logo">
-        <img class="logo" src="./media/logo.png" alt="logo" width="70px" />
+        <img
+          class="logo"
+          src="./media/logo-blanc.png"
+          alt="logo"
+          width="70px"
+        />
       </a>
-      <div id="tabs">
-        <button id="report">Signaler</button>
-        <button id="connect">Connexion</button>
-      </div>
+      <nav>
+        <a class="header-tab" href="reception.html">RECEPTION</a>
+        <a class="header-tab" href="formulaire.html">SIGNALEMENT</a>
+        <a class="header-tab" href="formulaire.html">CONNEXION</a>
+      </nav>
     </header>
 
     <section id="hero">
       <article>
         <h1>PHARE <span>Littré</span></h1>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          repellendus magni, natus labore quia quo.?
-        </h2>
+        <p id="hero-text">
+          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à
+          l'écoute de ceux ou celles témoins ou victimes de harcèlement
+          scolaire.
+        </p>
+
+        <button
+          id="hero-cta"
+          onclick="window.location.href = '/formulaire.html'"
+        >
+          Signaler un Cas de Harcélement
+        </button>
       </article>
-      <div id="svg-bg"></div>
     </section>
+
+    <section id="info-section">
+      <h2 class="section-head">Comment ça marche?</h2>
+
+      <p>
+        PHARE Littré te permet de signaler les circonstances d'un cas de
+        harcèlement. Que tu sois victime ou témoin, tu as la possibilité de
+        t'adresser à un ambassadeur ou à un professeur du lycée Littré. De plus,
+        tu peux évidemment conserver ton anonymat, mais tu peux également nous
+        fournir ton nom. Toutes les conversations resteront formellement
+        confidentielles. Tu es en lieu sûr, n'hésite pas à témoigner !
+      </p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-head">Besoin d'aide?</h2>
+
+      <div id="wrapper">
+        <article class="item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            class="safety-svg"
+          >
+            <path
+              d="M508.5-331.5Q520-343 520-360t-11.5-28.5Q497-400 480-400t-28.5 11.5Q440-377 440-360t11.5 28.5Q463-320 480-320t28.5-11.5ZM440-480h80v-200h-80v200Zm40 400q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"
+            />
+          </svg>
+          <h2 class="phone-text">3020</h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="arrow-up"
+            viewBox="0 -960 960 960"
+          >
+            <path d="m280-400 200-200 200 200H280Z" />
+          </svg>
+          <h3 class="phone-title">Numéro National Harcèlement Scolaire</h3>
+        </article>
+        <article class="item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="safety-svg"
+            viewBox="0 -960 960 960"
+          >
+            <path
+              d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Zm242.5-97.5Q420-475 420-500t-17.5-42.5Q385-560 360-560t-42.5 17.5Q300-525 300-500t17.5 42.5Q335-440 360-440t42.5-17.5Zm240 0Q660-475 660-500t-17.5-42.5Q625-560 600-560t-42.5 17.5Q540-525 540-500t17.5 42.5Q575-440 600-440t42.5-17.5ZM320-280h320v-80H320v80Zm-80 80h480v-480H240v480Zm240-240Z"
+            />
+          </svg>
+          <h2 class="phone-text">3018</h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="arrow-up"
+            viewBox="0 -960 960 960"
+          >
+            <path d="m280-400 200-200 200 200H280Z" />
+          </svg>
+          <h3 class="phone-title">Numéro National Cyberharcèlement</h3>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <article id="info">
+        <a href="/" id="logo">
+          <img
+            class="logo"
+            src="./media/logo-blanc.png"
+            alt="logo"
+            width="70px"
+          />
+        </a>
+
+        <p>
+          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à
+          l'écoute de ceux ou celles témoins ou victimes de harcèlement
+          scolaire.
+        </p>
+      </article>
+
+      <nav>
+        <h3>OÙ ALLER</h3>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+          <li><a href="formulaire.html">Signaler un cas de harcèlement</a></li>
+          <li><a href="reception.html">Reception des signalements</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <a href="https://lyceelittreavranches.fr/" target="_blank">
+          <img
+            src="./media/littre-logo-blanc.png"
+            alt="Site officiel du lycée"
+            width="70"
+          />
+        </a>
+        <p>
+          En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300
+          Avranches
+        </p>
+      </article>
+
+      <div id="credits">
+        © 2026 – Projet réalisé par les élèves de première du lycée Littré en
+        spécialité NSI
+      </div>
+    </footer>
   </body>
 </html>

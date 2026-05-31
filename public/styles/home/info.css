@@ -1,0 +1,29 @@
+#info-section {
+  background-color: var(--yellow);
+  padding-top: 4rem;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 -15px 15px rgba(230, 184, 36, 1);
+}
+
+#info-section::before {
+  content: "";
+  background-color: var(--prim);
+  height: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+#info-section p {
+  width: 50%;
+  font-size: 1.9rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  color: white;
+}

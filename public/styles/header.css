@@ -1,48 +1,31 @@
-/* HEADER */
-
 header {
   position: fixed;
   height: 5rem;
   width: 100%;
-  background-color: rgba(249, 249, 249, 0.9);
+  background-color: rgba(0, 130, 121, 0.9);
   left: 0;
   right: 0;
   top: 0;
   display: flex;
   align-items: center;
-  box-shadow: var(--shad);
+  box-shadow: var(--shad-header);
   z-index: 10;
   backdrop-filter: blur(10px);
 }
 
 #logo {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  z-index: 100;
 }
 
-#tabs {
+header nav {
   margin-left: auto;
-  padding-right: 1rem;
+  padding: 2rem;
 }
 
-#report,
-#connect {
-  border: none;
-  border-radius: 1rem;
-  padding: 0.7rem 2rem;
+.header-tab {
+  text-decoration: none;
   color: white;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  outline: none;
-}
-
-#connect {
-  background-color: none;
-  color: var(--green);
-  border: var(--green) 2px solid;
-}
-
-#report {
-  background-color: var(--green);
+  margin-left: 3rem;
+  font-size: 1.2rem;
 }

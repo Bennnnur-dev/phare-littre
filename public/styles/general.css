@@ -1,14 +1,27 @@
 body {
   margin: 0;
-  background-color: var(--sec);
+  background-color: var(--prim);
   padding-top: 5rem;
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 :root {
-  --green: #008279;
-  --prim: #f9f9f9;
-  --sec: #ececec;
-  --text: #4d4d4d;
+  --green: rgb(0, 130, 121);
+  --yellow: rgb(230, 184, 36);
+  --prim: rgb(249, 249, 249);
+  --sec: rgb(240, 240, 240);
+  --text: rgb(141, 141, 141);
+  --blue: rgb(17, 82, 138);
   --shad: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  --shad-header: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  --shad-article: 6px 6px 5px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
 }
