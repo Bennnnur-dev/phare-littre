@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/formulaire/formulaire.css" />
+
+    <link rel="icon" href="./media/logo.png" />
     <title>Signalement</title>
   </head>
   <body>
@@ -22,12 +24,45 @@
       <nav>
         <a class="header-tab" href="/">ACCUEIL</a>
         <a class="header-tab" href="reception.html">RECEPTION</a>
-        <a class="header-tab" href="formulaire.html">CONNEXION</a>
+        <a class="header-tab" href="connexion.html">CONNEXION</a>
       </nav>
     </header>
 
     <main>
-      <form></form>
+      <h1 class="section-head" id="form-title">Signalement</h1>
+      <p id="form-desc">
+        Tu peux signaler à l'administration des cas de violence, de harcèlement
+        ou de discrimination. Nous examinerons chaque cas et nous trouverons des
+        solutions qui permettront à l'élève de se sentir mieux dans
+        l'établissement.
+      </p>
+      <form>
+        <label for="name">Ton Nom (facultatif)</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Veuillez renseigner un nom..."
+          maxlength="90"
+        />
+        <label for="date">Date de l'Incident (facultatif)</label>
+        <input id="date-input" type="date" name="date" placeholder="Ex: ..." />
+        <label for="message">Description</label>
+        <textarea
+          id="desc-input"
+          name="message"
+          maxlength="2000"
+          placeholder="Ex: contexte / raisons de l'incident / description de l'incident / témoins éventuels / nombre de fois qu'un incident de ce type s'est produit..."
+        ></textarea>
+        <legend>Selon toi, est-ce une situation de harcèlement ?</legend>
+        <input type="radio" name="bullied" value="no" checked />
+        <label class="rad" for="no">Non</label>
+        <input type="radio" name="bullied" value="yes" />
+        <label class="rad" for="yes">Oui</label>
+        <div id="button-wrapper">
+          <button id="send-button" type="submit">Envoyer</button>
+        </div>
+      </form>
+      <p id="err-msg">Une erreur inconnue s'est produite</p>
     </main>
 
     <footer>
@@ -77,5 +112,7 @@
         spécialité NSI
       </div>
     </footer>
+
+    <script src="./scripts/form.js"></script>
   </body>
 </html>

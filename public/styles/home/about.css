@@ -3,14 +3,6 @@
   padding-top: 4rem;
 }
 
-.section-head {
-  color: white;
-  font-size: 3rem;
-  width: 100%;
-  text-align: center;
-  margin: 0 0 1rem 0;
-}
-
 #wrapper {
   display: flex;
   justify-content: center;

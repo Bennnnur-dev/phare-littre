@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boîte de réception</title>
-    <link rel="icon" href="./media/logo.png" />
-    <link rel="stylesheet" href="./styles/reception/reception.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/formulaire/formulaire.css" />
+
+    <link rel="icon" href="./media/logo.png" />
+    <title>Connexion</title>
   </head>
   <body>
     <header>
@@ -22,39 +23,36 @@
       </a>
       <nav>
         <a class="header-tab" href="/">ACCUEIL</a>
-        <a class="header-tab" href="formulaire.html">SIGNALEMENT</a>
-        <a class="header-tab" href="connexion.html">CONNEXION</a>
       </nav>
     </header>
 
-    <div class="container" id="boite">
-      <div class="boite_header">
-        <div class="option_div">
-          <button class="option">Options</button>
-          <div class="option_menu">
-            <button class="option_non_lu">Marquer comme non lu</button>
-            <button class="option_prio">Marquer comme prioritaire</button>
-            <button class="option_suppr">Supprimer</button>
-          </div>
+    <main>
+      <h1 class="section-head" id="form-title">Connexion</h1>
+      <p id="form-desc">
+        Les professeurs et les ambassadeurs ont la possibilité de se connecter
+        pour consulter les plaintes déposées.
+      </p>
+      <form>
+        <label for="username">Identifiant</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="Veuillez renseigner un identifiant..."
+          maxlength="90"
+        />
+        <label for="password">Mot de Passe</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Veuillez renseigner un mot de passe..."
+          maxlength="90"
+        />
+        <div id="button-wrapper">
+          <button id="send-button" type="submit">Envoyer</button>
         </div>
-        <p class="title">Boîte de réception</p>
-      </div>
-      <div class="boite_subheader">
-        <hr />
-        <input type="button" class="principale" value="Principale" />
-        <input type="button" class="prioritaire" value="Prioritaire" />
-      </div>
-      <div class="liste_message"></div>
-    </div>
-
-    <div class="read" id="message">
-      <div class="boite_header">
-        <button class="retour">Retour</button>
-        <p class="title" id="header_lecture"></p>
-      </div>
-
-      <div class="lecture_message"></div>
-    </div>
+      </form>
+      <p id="err-msg">Une erreur inconnue s'est produite</p>
+    </main>
 
     <footer>
       <article id="info">
@@ -103,5 +101,7 @@
         spécialité NSI
       </div>
     </footer>
+
+    <script src="./scripts/form.js"></script>
   </body>
 </html>

@@ -25,3 +25,19 @@ button:hover {
   transform: scale(1.01);
   opacity: 0.9;
 }
+
+.section-head {
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  text-align: justify;
+}
+
+button {
+  cursor: pointer;
+}
