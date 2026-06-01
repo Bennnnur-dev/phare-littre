@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/reception/reception.css" />
+    <link rel="stylesheet" href="./styles/reception/profile.css" />
+    <link rel="stylesheet" href="./styles/reception/profile-page.css" />
+
+    <link rel="icon" href="./media/logo.png" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" id="logo">
+        <img
+          class="logo"
+          src="./media/logo-blanc.png"
+          alt="logo"
+          width="70px"
+        />
+      </a>
+      <nav>
+        <a class="header-tab" href="reception.html">RETOUR</a>
+        <a class="header-tab" href="connexion.html">DECONNEXION</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="upper-tab">
+        <button
+          id="undo-button"
+          onclick="window.location.href = '/reception.html'"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+            <path
+              d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
+            />
+          </svg>
+        </button>
+        <button id="del-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+            <path
+              d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+            />
+          </svg>
+        </button>
+      </section>
+
+      <section id="profile-head"></section>
+      <section id="profile-body"></section>
+
+      <p id="err-msg">Erreur inconnue</p>
+    </main>
+
+    <footer>
+      <article id="info">
+        <a href="/" id="logo">
+          <img
+            class="logo"
+            src="./media/logo-blanc.png"
+            alt="logo"
+            width="70px"
+          />
+        </a>
+
+        <p>
+          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à
+          l'écoute de ceux ou celles témoins ou victimes de harcèlement
+          scolaire.
+        </p>
+      </article>
+
+      <nav>
+        <h3>OÙ ALLER</h3>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+          <li><a href="formulaire.html">Signaler un cas de harcèlement</a></li>
+          <li><a href="reception.html">Reception des signalements</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <a href="https://lyceelittreavranches.fr/" target="_blank">
+          <img
+            src="./media/littre-logo-blanc.png"
+            alt="Site officiel du lycée"
+            width="70"
+          />
+        </a>
+        <p>
+          En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300
+          Avranches
+        </p>
+      </article>
+
+      <div id="credits">
+        © 2026 – Projet réalisé par les élèves de première du lycée Littré en
+        spécialité NSI
+      </div>
+    </footer>
+
+    <script src="./scripts/profile.js"></script>
+  </body>
+</html>

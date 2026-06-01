@@ -13,10 +13,10 @@ async function errorHandler(error, req, res, next) {
   }
 
   if (!error || !error.status || !error.message) {
-    return res.status(500).json({ msg: "Unknown Error", code: 0 });
+    return res.status(500).json({ msg: "Erreur inconnue", code: 1 });
   }
 
-  res.status(error.status).json({ msg: error.message, code: 0 });
+  res.status(error.status).json({ msg: error.message, code: 1 });
 }
 
 module.exports = errorHandler;

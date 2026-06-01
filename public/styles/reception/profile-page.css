@@ -1,0 +1,130 @@
+body {
+  background-image: url("data:image/svg+xml,%3Csvg width='700' height='700' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+main {
+  background-color: var(--prim);
+  box-shadow: var(--shad);
+  width: 40%;
+  margin: 4rem auto 8rem auto;
+  min-height: 35rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
+}
+
+#upper-tab {
+  padding: 0.2rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#undo-button,
+#del-button {
+  background: none;
+  border: none;
+  opacity: 0.8;
+}
+
+#del-button {
+  margin-left: auto;
+}
+
+#undo-button svg {
+  fill: #7ca7d8;
+  width: 35px;
+}
+
+#del-button svg {
+  fill: brown;
+  width: 30px;
+}
+
+#profile-head {
+  padding: 1rem;
+  border-top: solid rgb(230, 230, 230) 1px;
+  border-bottom: solid rgb(230, 230, 230) 1px;
+  display: flex;
+  align-items: start;
+}
+
+#profile-info {
+  display: flex;
+  align-items: center;
+}
+
+#profile-pic {
+  margin: 0 1rem 0 0;
+}
+
+#config-area {
+  margin-left: auto;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+#pin-button {
+  background: none;
+  border: solid var(--green) 1px;
+  border-radius: 0.5rem;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+#pin-button svg {
+  width: 20px;
+  fill: var(--green);
+  margin-right: 0.5rem;
+}
+
+#profile-body {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.body-info {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.body-info span {
+  color: black;
+}
+
+#body-desc {
+  position: relative;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  padding-left: 1.3rem;
+  line-height: 1.5rem;
+}
+
+#body-desc::before {
+  position: absolute;
+  left: 0rem;
+  top: -7px;
+  bottom: -7px;
+  width: 2px;
+  content: "";
+  background-color: var(--text);
+  border-radius: 1rem;
+  border: solid var(--text) 1px;
+  opacity: 0.25;
+}
+
+#err-msg {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  right: 2rem;
+  color: rgb(204, 91, 91);
+  font-weight: 600;
+  padding-top: 2rem;
+  visibility: hidden;
+}

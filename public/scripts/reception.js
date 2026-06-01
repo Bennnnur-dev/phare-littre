@@ -21,13 +21,13 @@ function renderForms(forms) {
     );
 
     html += `
-     <article class="profile">
+     <article class="profile" onClick="window.location.href='/profile.html?id=${form._id}'">
           <div style="background-color: ${form.color}" class="profile-pic">${form.name[0].toUpperCase()}</div>
           <div>
             <h3 class="profile-name">${form.name}</h3>
             <div class="profile-date">${date}</div>
           </div>
-          <a class="profile-href" href="">Consulter</a>
+          <a class="profile-href" href="/profile.html?id=${form._id}">Consulter</a>
           <svg
             class="bookmark-svg"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function renderForms(forms) {
           </svg>
         </article>
     `;
-
-    container.innerHTML = html;
   });
+
+  container.innerHTML = html;
 }
