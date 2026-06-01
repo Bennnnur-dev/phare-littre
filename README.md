@@ -6,3 +6,5 @@
 - Ajouter utilisateur
 - Faire système de plaintes prioritaires
 - Faire système de recherche de plainte par nom
+- Pagination plaintes
+- Responsive design
