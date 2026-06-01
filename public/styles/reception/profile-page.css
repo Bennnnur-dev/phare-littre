@@ -7,10 +7,11 @@ main {
   box-shadow: var(--shad);
   width: 40%;
   margin: 4rem auto 8rem auto;
-  min-height: 35rem;
+  min-height: 30rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   position: relative;
+  padding-bottom: 5rem;
 }
 
 #upper-tab {
