@@ -8,6 +8,7 @@ const errorHandler = require("./errors/handler");
 //point d'entrée du serveur
 
 const PORT = process.env.PORT;
+app.use(cors());
 
 app.use(express.static("./public"));
 app.use(express.json());

@@ -10,6 +10,12 @@ main {
   min-height: 40rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  position: relative;
+}
+
+#head-form {
+  display: flex;
+  align-items: center;
 }
 
 #recep-header {
@@ -71,4 +77,15 @@ input::placeholder {
 #container {
   overflow: hidden;
   width: 100%;
+}
+
+#err-msg {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  right: 2rem;
+  color: rgb(204, 91, 91);
+  font-weight: 600;
+  padding-top: 2rem;
+  visibility: hidden;
 }

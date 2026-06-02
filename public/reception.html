@@ -14,12 +14,7 @@
   <body>
     <header>
       <a href="/" id="logo">
-        <img
-          class="logo"
-          src="./media/logo-blanc.png"
-          alt="logo"
-          width="70px"
-        />
+        <img class="logo" src="./media/logo-blanc.png" alt="logo" width="70px" />
       </a>
       <nav>
         <a class="header-tab" href="/">ACCUEIL</a>
@@ -30,46 +25,39 @@
 
     <main>
       <section id="recep-header">
-        <div id="check-wrapper">
-          <input type="checkbox" name="unimportant" id="unimportant" checked />
-          <label for="unimportant">Non-prioritaires</label>
-          <input type="checkbox" name="important" id="important" checked />
-          <label for="important">Prioritaires</label>
-        </div>
+        <form id="head-form">
+          <div id="check-wrapper">
+            <input type="radio" name="important" id="unimportant" value="FALSE" checked />
+            <label for="unimportant">Tout</label>
+            <input type="radio" name="important" id="important" value="TRUE" />
+            <label for="important">Prioritaires</label>
+          </div>
 
-        <form class="input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-            <path
-              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
-            />
-          </svg>
-          <input
-            class="search-input"
-            type="text"
-            placeholder="Rechercher un mot clé..."
-            name="search"
-          />
+          <div class="input-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+              <path
+                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+              />
+            </svg>
+            <input class="search-input" type="text" placeholder="Rechercher un nom..." name="search" />
+          </div>
         </form>
       </section>
 
       <section id="container"></section>
+
+      <p id="err-msg">Erreur inconnue</p>
     </main>
 
     <footer>
       <article id="info">
         <a href="/" id="logo">
-          <img
-            class="logo"
-            src="./media/logo-blanc.png"
-            alt="logo"
-            width="70px"
-          />
+          <img class="logo" src="./media/logo-blanc.png" alt="logo" width="70px" />
         </a>
 
         <p>
-          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à
-          l'écoute de ceux ou celles témoins ou victimes de harcèlement
-          scolaire.
+          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à l'écoute de ceux ou celles
+          témoins ou victimes de harcèlement scolaire.
         </p>
       </article>
 
@@ -85,21 +73,13 @@
 
       <article>
         <a href="https://lyceelittreavranches.fr/" target="_blank">
-          <img
-            src="./media/littre-logo-blanc.png"
-            alt="Site officiel du lycée"
-            width="70"
-          />
+          <img src="./media/littre-logo-blanc.png" alt="Site officiel du lycée" width="70" />
         </a>
-        <p>
-          En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300
-          Avranches
-        </p>
+        <p>En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300 Avranches</p>
       </article>
 
       <div id="credits">
-        © 2026 – Projet réalisé par les élèves de première du lycée Littré en
-        spécialité NSI
+        © 2026 – Projet réalisé par les élèves de première du lycée Littré en spécialité NSI
       </div>
     </footer>
 

@@ -2,8 +2,6 @@
 
 - Auth
 - Protéger les routes
-- Ajouter utilisateur
-- Faire système de plaintes prioritaires
-- Faire système de recherche de plainte par nom
 - Pagination plaintes
 - Responsive design
+- BUG: Corriger taille maximale du nom dans receptio.html/profile.html

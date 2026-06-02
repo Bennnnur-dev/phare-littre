@@ -15,9 +15,16 @@ async function postForm(req, res, next) {
 
 async function getFormsPaginated(req, res, next) {
   try {
-    const after = req.query.after;
+    const { after, important: imp, search } = req.query;
     const query = after ? { _id: { $gt: after } } : {};
-    const forms = await Form.find(query).limit(10).sort({ _id: 1 });
+    console.log(imp);
+    const forms = await Form.find({
+      ...query,
+      name: { $regex: search, $options: "i" },
+      ...(imp === "TRUE" && { important: true }),
+    })
+      .limit(10)
+      .sort({ _id: 1 });
     const lastItem = forms[forms.length - 1];
 
     res.status(200).json({
@@ -45,6 +52,22 @@ async function getSingleForm(req, res, next) {
   }
 }
 
+async function patchForm(req, res, next) {
+  try {
+    const { id } = req.params;
+    const form = await Form.findOneAndUpdate({ _id: id }, req.body.data, {
+      new: true,
+      runValidators: true,
+    });
+
+    res.status(200).json({
+      data: form,
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
 async function deleteForm(req, res, next) {
   try {
     const { id } = req.params;
@@ -62,4 +85,5 @@ module.exports = {
   getFormsPaginated,
   getSingleForm,
   deleteForm,
+  patchForm,
 };
