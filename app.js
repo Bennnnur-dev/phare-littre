@@ -4,6 +4,7 @@ require("dotenv").config();
 const connect = require("./db/connect");
 const formRouter = require("./routes/router");
 const errorHandler = require("./errors/handler");
+const cors = require("cors");
 
 //point d'entrée du serveur
 
