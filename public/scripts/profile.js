@@ -11,6 +11,7 @@ delButton.addEventListener("click", async () => {
   const res = await deleteForm(id);
   console.log(res);
   if (res.code) {
+    if (res.code === 401) return (location.href = "/connexion.html");
     errMsg.style.visibility = "visible";
     errMsg.textContent = res.msg;
   } else window.location.href = "/reception.html";
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const res = await getForm(id);
   console.log(res);
   if (res.code) {
+    if (res.code === 401) return (location.href = "/connexion.html");
+
     errMsg.style.visibility = "visible";
     errMsg.textContent = res.msg;
   } else {
@@ -30,13 +33,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 async function getForm(id) {
-  const res = await fetch(`http://localhost:5500/form/single/${id}`);
+  const res = await fetch(`http://localhost:5500/form/admin/single/${id}`);
   const data = await res.json();
   return data;
 }
 
 async function deleteForm(id) {
-  const res = await fetch(`http://localhost:5500/form/single/${id}`, {
+  const res = await fetch(`http://localhost:5500/form/admin/single/${id}`, {
     method: "DELETE",
   });
   const data = await res.json();
@@ -44,7 +47,7 @@ async function deleteForm(id) {
 }
 
 async function patchForm(form) {
-  const res = await fetch(`http://localhost:5500/form/single/${id}`, {
+  const res = await fetch(`http://localhost:5500/form/admin/single/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +59,9 @@ async function patchForm(form) {
 }
 
 function renderForm(data) {
-  const date = new Intl.DateTimeFormat("en-GB").format(new Date(data.createdAt));
+  const date = new Intl.DateTimeFormat("en-GB").format(
+    new Date(data.createdAt),
+  );
 
   headContainer.innerHTML = `
 <article id="profile-info">
@@ -91,7 +96,10 @@ function renderForm(data) {
     const { state } = impButton.dataset;
     console.log(state);
     const form = JSON.parse(sessionStorage.getItem("FORM"));
-    const res = await patchForm({ ...form, important: state === "NOPIN" ? true : false });
+    const res = await patchForm({
+      ...form,
+      important: state === "NOPIN" ? true : false,
+    });
     if (res.code) {
       errMsg.style.visibility = "visible";
       errMsg.textContent = res.msg;

@@ -51,10 +51,10 @@ h1 span {
   border: none;
   padding: 1rem 3rem;
   border-radius: 0.5rem;
-  color: white;
   font-weight: 700;
   font-size: 1rem;
   box-shadow: var(--shad);
   margin-top: 1rem;
+  color: white;
   cursor: pointer;
 }

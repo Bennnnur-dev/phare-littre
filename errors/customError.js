@@ -24,4 +24,17 @@ class NotFoundErr extends Error {
   }
 }
 
-module.exports = { InternalServerErr, NotFoundErr, UnauthorizedErr };
+class BadRequestErr extends Error {
+  constructor(message) {
+    super();
+    this.message = message;
+    this.status = 400;
+  }
+}
+
+module.exports = {
+  InternalServerErr,
+  NotFoundErr,
+  BadRequestErr,
+  UnauthorizedErr,
+};

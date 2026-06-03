@@ -1,9 +1,10 @@
 const Form = require("../db/FormSchema");
 const { NotFoundErr } = require("../errors/customError");
+const sanitize = require("mongo-sanitize");
 
 async function postForm(req, res, next) {
   try {
-    console.log(req.body);
+    req.body = sanitize(req.body); //éviter les injections NOSQL
     const { data } = req.body;
     const form = new Form(data);
     await form.save();
@@ -15,6 +16,7 @@ async function postForm(req, res, next) {
 
 async function getFormsPaginated(req, res, next) {
   try {
+    req.query = sanitize(req.query);
     const { after, important: imp, search } = req.query;
     const query = after ? { _id: { $gt: after } } : {};
     console.log(imp);
@@ -38,6 +40,7 @@ async function getFormsPaginated(req, res, next) {
 
 async function getSingleForm(req, res, next) {
   try {
+    req.params = sanitize(req.params);
     const { id } = req.params;
     const form = await Form.findById(id);
     if (!form) {
@@ -54,6 +57,8 @@ async function getSingleForm(req, res, next) {
 
 async function patchForm(req, res, next) {
   try {
+    req.body = sanitize(req.body); //éviter les injections NOSQL
+    req.params = sanitize(req.params);
     const { id } = req.params;
     const form = await Form.findOneAndUpdate({ _id: id }, req.body.data, {
       new: true,
@@ -70,6 +75,7 @@ async function patchForm(req, res, next) {
 
 async function deleteForm(req, res, next) {
   try {
+    req.params = sanitize(req.params);
     const { id } = req.params;
     const form = await Form.findByIdAndDelete(id);
     res.status(200).json({

@@ -5,6 +5,7 @@ const errMsg = document.getElementById("err-msg");
 async function send(id = "", imp = false, search = "") {
   const res = await getForms(id, imp, search);
   if (res.code) {
+    if (res.code === 401) return (location.href = "/connexion.html");
     errMsg.style.visibility = "visible";
     errMsg.textContent = res.msg;
   } else {
@@ -23,7 +24,7 @@ settings.addEventListener("input", () => {
 
 async function getForms(id, important, search) {
   const res = await fetch(
-    `http://localhost:5500/form?after=${id}&important=${important}&search=${search.trim()}`,
+    `http://localhost:5500/form/admin?after=${id}&important=${important}&search=${search.trim()}`,
   );
   const data = await res.json();
   return data;
@@ -32,11 +33,13 @@ async function getForms(id, important, search) {
 function renderForms(forms) {
   let html = "";
 
-  forms.forEach(form => {
-    const date = new Intl.DateTimeFormat("en-GB").format(new Date(form.createdAt));
+  forms?.forEach(form => {
+    const date = new Intl.DateTimeFormat("en-GB").format(
+      new Date(form.createdAt),
+    );
 
     html += `
-     <article class="profile" onClick="window.location.href='/profile.html?id=${form._id}'">
+     <article class="profile" data-id="${form._id}">
           <div style="background-color: ${form.color}" class="profile-pic">${form.name[0].toUpperCase()}</div>
           <div>
             <h3 class="profile-name">${form.name}</h3>
@@ -57,4 +60,11 @@ function renderForms(forms) {
   });
 
   container.innerHTML = html;
+
+  container?.querySelectorAll(".profile").forEach(el => {
+    el.addEventListener("click", () => {
+      const { id } = el.dataset;
+      location.href = `/profile.html?id=${id}`;
+    });
+  });
 }

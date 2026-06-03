@@ -14,12 +14,17 @@
   <body>
     <header>
       <a href="/" id="logo">
-        <img class="logo" src="./media/logo-blanc.png" alt="logo" width="70px" />
+        <img
+          class="logo"
+          src="./media/logo-blanc.png"
+          alt="logo"
+          width="70px"
+        />
       </a>
       <nav>
         <a class="header-tab" href="/">ACCUEIL</a>
         <a class="header-tab" href="formulaire.html">SIGNALEMENT</a>
-        <a class="header-tab" href="connexion.html">CONNEXION</a>
+        <a class="header-tab" id="connect-a" href="connexion.html">CONNEXION</a>
       </nav>
     </header>
 
@@ -27,7 +32,13 @@
       <section id="recep-header">
         <form id="head-form">
           <div id="check-wrapper">
-            <input type="radio" name="important" id="unimportant" value="FALSE" checked />
+            <input
+              type="radio"
+              name="important"
+              id="unimportant"
+              value="FALSE"
+              checked
+            />
             <label for="unimportant">Tout</label>
             <input type="radio" name="important" id="important" value="TRUE" />
             <label for="important">Prioritaires</label>
@@ -39,7 +50,12 @@
                 d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
               />
             </svg>
-            <input class="search-input" type="text" placeholder="Rechercher un nom..." name="search" />
+            <input
+              class="search-input"
+              type="text"
+              placeholder="Rechercher un nom..."
+              name="search"
+            />
           </div>
         </form>
       </section>
@@ -52,12 +68,18 @@
     <footer>
       <article id="info">
         <a href="/" id="logo">
-          <img class="logo" src="./media/logo-blanc.png" alt="logo" width="70px" />
+          <img
+            class="logo"
+            src="./media/logo-blanc.png"
+            alt="logo"
+            width="70px"
+          />
         </a>
 
         <p>
-          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à l'écoute de ceux ou celles
-          témoins ou victimes de harcèlement scolaire.
+          PHARE Littré est une plateforme d'écoute sécurisée et sans filtre à
+          l'écoute de ceux ou celles témoins ou victimes de harcèlement
+          scolaire.
         </p>
       </article>
 
@@ -65,7 +87,7 @@
         <h3>OÙ ALLER</h3>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
+          <li><a id="footer-a" href="connexion.html">Connexion</a></li>
           <li><a href="formulaire.html">Signaler un cas de harcèlement</a></li>
           <li><a href="reception.html">Reception des signalements</a></li>
         </ul>
@@ -73,16 +95,25 @@
 
       <article>
         <a href="https://lyceelittreavranches.fr/" target="_blank">
-          <img src="./media/littre-logo-blanc.png" alt="Site officiel du lycée" width="70" />
+          <img
+            src="./media/littre-logo-blanc.png"
+            alt="Site officiel du lycée"
+            width="70"
+          />
         </a>
-        <p>En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300 Avranches</p>
+        <p>
+          En collaboration avec le lycée Émile-Littré - Boulevard Pasteur 50300
+          Avranches
+        </p>
       </article>
 
       <div id="credits">
-        © 2026 – Projet réalisé par les élèves de première du lycée Littré en spécialité NSI
+        © 2026 – Projet réalisé par les élèves de première du lycée Littré en
+        spécialité NSI
       </div>
     </footer>
 
     <script src="./scripts/reception.js"></script>
+    <script src="./scripts/logout.js"></script>
   </body>
 </html>

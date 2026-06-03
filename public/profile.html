@@ -26,22 +26,23 @@
       </a>
       <nav>
         <a class="header-tab" href="reception.html">RETOUR</a>
-        <a class="header-tab" href="connexion.html">DECONNEXION</a>
+        <a class="header-tab" id="connect-a" href="connexion.html "
+          >CONNEXION</a
+        >
       </nav>
     </header>
 
     <main>
       <section id="upper-tab">
-        <button
-          id="undo-button"
-          onclick="window.location.href = '/reception.html'"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-            <path
-              d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
-            />
-          </svg>
-        </button>
+        <a href="/reception.html">
+          <button id="undo-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+              <path
+                d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
+              />
+            </svg>
+          </button>
+        </a>
         <button id="del-button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
             <path
@@ -79,7 +80,7 @@
         <h3>OÙ ALLER</h3>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
+          <li><a id="footer-a" href="connexion.html">Connexion</a></li>
           <li><a href="formulaire.html">Signaler un cas de harcèlement</a></li>
           <li><a href="reception.html">Reception des signalements</a></li>
         </ul>
@@ -106,5 +107,6 @@
     </footer>
 
     <script src="./scripts/profile.js"></script>
+    <script src="./scripts/logout.js"></script>
   </body>
 </html>

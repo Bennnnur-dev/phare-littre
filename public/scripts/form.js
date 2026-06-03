@@ -39,7 +39,8 @@ function handleRes(res) {
   // err
   if (res.code) {
     console.error(res);
-    errMsg.textContent = res.msg.split("%%")[1];
+    if (res.code === 100) return (errMsg.textContent = res.msg.split("%%")[1]);
+    errMsg.textContent = res.msg;
   } else {
     errMsg.textContent = "Envoyé avec succès!";
     errMsg.style.color = "green";

@@ -31,7 +31,7 @@
       <nav>
         <a class="header-tab" href="reception.html">RECEPTION</a>
         <a class="header-tab" href="formulaire.html">SIGNALEMENT</a>
-        <a class="header-tab" href="connexion.html">CONNEXION</a>
+        <a class="header-tab" id="connect-a" href="connexion.html">CONNEXION</a>
       </nav>
     </header>
 
@@ -44,12 +44,9 @@
           scolaire.
         </p>
 
-        <button
-          id="hero-cta"
-          onclick="window.location.href = '/formulaire.html'"
-        >
-          Signaler un Cas de Harcélement
-        </button>
+        <a href="/formulaire.html">
+          <button id="hero-cta">Signaler un Cas de Harcélement</button>
+        </a>
       </article>
     </section>
 
@@ -135,7 +132,7 @@
         <h3>OÙ ALLER</h3>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
+          <li><a id="footer-a" href="connexion.html">Connexion</a></li>
           <li><a href="formulaire.html">Signaler un cas de harcèlement</a></li>
           <li><a href="reception.html">Reception des signalements</a></li>
         </ul>
@@ -160,5 +157,7 @@
         spécialité NSI
       </div>
     </footer>
+
+    <script src="./scripts/logout.js"></script>
   </body>
 </html>

@@ -1,7 +1,13 @@
 //les erreurs des fonctions de l'API sont traitées puis renvoyées ici
 
+const { UnauthorizedErr } = require("./customError");
+
 async function errorHandler(error, req, res, next) {
   console.log(error);
+  if (error instanceof UnauthorizedErr) {
+    return res.status(error.status).json({ msg: error.message, code: 401 });
+  }
+
   if (error.constructor.name == "MongoServerError") {
     const { code, errmsg } = error.errorResponse;
     return res.status(400).json({ msg: errmsg, code });
