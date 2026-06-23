@@ -3,7 +3,7 @@ const footerButton = document.getElementById("footer-a");
 
 button.addEventListener("click", logout);
 document.addEventListener("DOMContentLoaded", () => {
-  const state = sessionStorage.getItem("LOG_STATE");
+  const state = localStorage.getItem("LOG_STATE");
   if (state === "LOGIN") {
     button.textContent = "DECONNEXION";
     footerButton.textContent = "Déconnexion";
@@ -21,7 +21,7 @@ async function logout() {
       throw new Error(res.msg);
     }
     window.location = "/connexion.html";
-    sessionStorage.setItem("LOG_STATE", "LOGOUT");
+    localStorage.setItem("LOG_STATE", "LOGOUT");
   } catch (error) {
     console.error(error);
     alert(`Impossible de se déconnecter: ${error}`);

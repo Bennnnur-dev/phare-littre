@@ -8,7 +8,8 @@ async function postForm(req, res, next) {
     const { data } = req.body;
     const form = new Form(data);
     await form.save();
-    res.status(201).json({ data: form });
+    req.form = form;
+    next();
   } catch (err) {
     next(err);
   }

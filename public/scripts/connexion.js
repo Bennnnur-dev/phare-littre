@@ -13,7 +13,7 @@ form.addEventListener("submit", async e => {
     errMsg.textContent = res.msg;
   } else {
     location.href = "/index.html";
-    sessionStorage.setItem("LOG_STATE", "LOGIN");
+    localStorage.setItem("LOG_STATE", "LOGIN");
   }
 });
 

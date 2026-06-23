@@ -7,12 +7,13 @@ const errorHandler = require("./errors/handler");
 const cors = require("cors");
 const session = require("express-session");
 const { MongoStore } = require("connect-mongo");
-const verifySession = require("./auth/verifySession");
+const verifySession = require("./middleware/verifySession");
 const { postForm } = require("./controller/forms");
 const authRouter = require("./routes/auth");
 const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 const helmet = require("helmet");
+const sendEmail = require("./middleware/email");
 
 const PORT = process.env.PORT;
 
@@ -56,7 +57,7 @@ app.use(express.static("./public"));
 
 app.use("/auth", authRouter);
 app.use("/form/admin", verifySession, formRouter);
-app.post("/form", postForm);
+app.post("/form", postForm, sendEmail);
 
 app.use(errorHandler);
 

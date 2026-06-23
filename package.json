@@ -11,6 +11,7 @@
     "hpp": "^0.2.3",
     "mongo-sanitize": "^1.1.0",
     "mongoose": "^9.3.1",
+    "nodemailer": "^9.0.1",
     "nodemon": "^3.1.14"
   },
   "name": "serveur-phare",

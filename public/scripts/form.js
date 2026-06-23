@@ -26,7 +26,6 @@ async function submitForm() {
   const formData = Object.fromEntries(new FormData(form));
   const sanitized = {
     ...formData,
-    bullied: formData.bullied == "no" ? false : true,
     name: !formData.name ? "anonyme" : formData.name.trim(),
     message: formData.message.trim(),
   };

@@ -20,11 +20,6 @@ const schema = new mongoose.Schema(
       minLength: [3, "%%Le nom doit être d'au moins 3 charactères%%"],
       maxLength: [90, "%%Le nom doit être infèrieur à 90 caractères%%"],
     },
-    bullied: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
     date: {
       type: String,
       required: false,

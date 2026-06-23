@@ -83,7 +83,6 @@ function renderForm(data) {
     `;
 
   bodyContainer.innerHTML = `
-            <p class="body-info">Elève harcelé(e): <span>${data.bullied ? "OUI" : "NON"}</span></p>
 <p class="body-info">Date de l'incident: <span>${data.date ? data.date.split("-").join("/") : "N/A"}</span></p>
 <p id="body-desc">
   ${data.message}
