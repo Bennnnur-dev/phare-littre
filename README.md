@@ -5,4 +5,3 @@
 - BUG: Corriger taille maximale du nom dans receptio.html/profile.html
 - Meilleur système de création d'utilisateur
 - Ajouter mentions légales
-- Envoit email
