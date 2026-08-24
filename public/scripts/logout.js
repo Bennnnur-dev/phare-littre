@@ -22,6 +22,7 @@ async function logout() {
     }
     window.location = "/connexion.html";
     localStorage.setItem("LOG_STATE", "LOGOUT");
+    localStorage.clear();
   } catch (error) {
     console.error(error);
     alert(`Impossible de se déconnecter: ${error}`);

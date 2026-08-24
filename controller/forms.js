@@ -19,8 +19,9 @@ async function getFormsPaginated(req, res, next) {
   try {
     req.query = sanitize(req.query);
     const { after, important: imp, search } = req.query;
+    console.log(after, typeof after);
     const query = after ? { _id: { $gt: after } } : {};
-    console.log(imp);
+    console.log(query);
     const forms = await Form.find({
       ...query,
       name: { $regex: search, $options: "i" },
@@ -29,10 +30,11 @@ async function getFormsPaginated(req, res, next) {
       .limit(10)
       .sort({ _id: 1 });
     const lastItem = forms[forms.length - 1];
+    console.log(forms.length);
 
     res.status(200).json({
       data: forms,
-      nextCursor: lastItem?._id ?? null,
+      nextCursor: lastItem?._id ?? "",
     });
   } catch (err) {
     next(err);
