@@ -28,7 +28,7 @@ const observer = new IntersectionObserver(
   },
 );
 
-observer.observe(target);
+// observer.observe(target);
 
 async function send(imp = false, search = "") {
   const res = await getForms("", imp, search);
