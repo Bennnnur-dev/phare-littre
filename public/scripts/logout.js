@@ -2,6 +2,7 @@ const button = document.getElementById("connect-a");
 const footerButton = document.getElementById("footer-a");
 
 button.addEventListener("click", logout);
+footerButton.addEventListener("click", logout);
 document.addEventListener("DOMContentLoaded", () => {
   const state = localStorage.getItem("LOG_STATE");
   if (state === "LOGIN") {

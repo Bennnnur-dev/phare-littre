@@ -1,4 +1,5 @@
-//PROGRAMME EXECUTABLE EXTERNE / NE PAS UTILISER EN PRODUCTION
+//PROGRAMME EXECUTABLE EXTERNE
+//node INSERT_USER.js pour exécuter
 
 const Users = require("./db/UsersSchema");
 const connect = require("./db/connect");
