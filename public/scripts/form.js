@@ -45,6 +45,6 @@ function handleRes(res) {
     errMsg.style.color = "green";
     setTimeout(() => {
       window.location.href = "/";
-    }, 1000);
+    }, 100);
   }
 }

@@ -6,16 +6,19 @@ document.addEventListener("DOMContentLoaded", () => send(false, ""));
 
 settings.addEventListener("input", async () => {
   const { important, search } = Object.fromEntries(new FormData(settings));
-  console.log("IMP", important, search);
+  container.innerHTML = "";
   await send(important, search);
 });
 
-const target = document.querySelector("footer");
+const target = document.getElementById("err-msg");
 
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(async entry => {
-      if (entry.isIntersecting) {
+      if (
+        entry.isIntersecting &&
+        container.lastElementChild.dataset.id !== ""
+      ) {
         const { important, search } = Object.fromEntries(
           new FormData(settings),
         );
@@ -24,14 +27,15 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "100px",
+    rootMargin: "1px",
   },
 );
 
-// observer.observe(target);
+observer.observe(target);
 
 async function send(imp = false, search = "") {
-  const res = await getForms("", imp, search);
+  const lastId = container.lastElementChild?.dataset.id || "";
+  const res = await getForms(lastId, imp, search);
   if (res.code) {
     if (res.code === 401) return (location.href = "/connexion.html");
     errMsg.style.visibility = "visible";

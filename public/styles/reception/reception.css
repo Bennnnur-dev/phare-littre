@@ -80,12 +80,10 @@ input::placeholder {
 }
 
 #err-msg {
-  position: absolute;
-  bottom: 1rem;
-  left: 2rem;
-  right: 2rem;
   color: rgb(204, 91, 91);
   font-weight: 600;
-  padding-top: 2rem;
+  padding-top: 1rem;
   visibility: hidden;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
 }
