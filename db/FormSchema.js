@@ -38,6 +38,9 @@ const schema = new mongoose.Schema(
   { timestamps: true },
 );
 
+//expiration après 1 an
+schema.index({ createdAt: 1 }, { expireAfterSeconds: 31536000 });
+
 schema.pre("save", async function () {
   this.color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
   this.important = false;

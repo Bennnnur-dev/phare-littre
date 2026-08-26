@@ -6,4 +6,4 @@
 
 ## CE QU'IL RESTE A FAIRE
 
-- Conformité RGPD & légale (suppression data après un an, politique de confidentialité, mentions légales)
+- Conformité RGPD & légale (politique de confidentialité, mentions légales)
