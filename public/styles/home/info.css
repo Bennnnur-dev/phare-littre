@@ -1,29 +1,51 @@
 #info-section {
   background-color: var(--yellow);
-  padding-top: 4rem;
-  height: 30rem;
+
   position: relative;
+
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 5vw, 3rem)
+    clamp(4rem, 8vw, 6rem);
+
   box-shadow: 0 -15px 15px rgba(230, 184, 36, 1);
 }
 
 #info-section::before {
   content: "";
+
   background-color: var(--prim);
+
   height: 1px;
+
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
+
   opacity: 0.5;
 }
 
 #info-section p {
-  width: 50%;
-  font-size: 1.9rem;
-  line-height: 2.5rem;
+  width: 100%;
+  max-width: 950px;
+
+  margin: 1rem auto 0;
+
+  font-size: clamp(1.05rem, 2.4vw, 1.9rem);
+  line-height: 1.5;
+
   text-align: justify;
+
   color: white;
+}
+
+@media (max-width: 600px) {
+  #info-section p {
+    text-align: left;
+    line-height: 1.6;
+  }
 }

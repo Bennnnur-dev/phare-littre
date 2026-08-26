@@ -1,73 +1,100 @@
 footer {
-  height: 25rem;
   background-color: var(--green);
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2rem;
-}
 
-#credits {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2rem;
-  border-top: solid rgba(255, 255, 255, 0.5) 1px;
-  color: white;
-  padding: 1rem;
-  padding-left: 2rem;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: clamp(2rem, 5vw, 5rem);
+
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 6vw, 5rem) 0;
+  width: 100%;
 }
 
 footer article {
-  width: 20%;
-  padding: 2rem;
-}
-
-#info a {
-  margin: 0;
-}
-
-footer p {
-  margin: 0;
-  text-align: justify;
-  color: white;
-}
-
-footer h3 {
-  color: rgb(208, 208, 208);
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
-footer ul {
-  list-style: none;
-  position: relative;
+  width: auto;
   padding: 0;
 }
 
 footer nav {
-  padding: 2rem;
+  padding: 0;
+}
+
+footer p {
+  margin: 1.5rem 0 0;
+
+  text-align: left;
+
+  color: white;
+
+  line-height: 1.6;
+}
+
+footer h3 {
+  color: rgb(208, 208, 208);
+
+  font-weight: 400;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  margin-top: 0;
+}
+
+footer ul {
+  list-style: none;
+
+  position: relative;
+
+  padding: 0;
+  margin: 0;
 }
 
 footer li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 footer a {
   color: white;
+
   outline: none;
+
   text-decoration: none;
+
   font-weight: 300;
-  font-size: 1.2rem;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-/* footer nav::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 1px;
-  top: 0;
-  bottom: 0;
-  background-color: white;
-} */
+#credits {
+  color: white;
+  font-weight: 200;
+  padding-bottom: 1rem;
+}
+
+/* TABLETTE */
+@media (max-width: 850px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer article:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  footer article:last-of-type {
+    grid-column: auto;
+  }
+
+  footer p {
+    max-width: 500px;
+  }
+}

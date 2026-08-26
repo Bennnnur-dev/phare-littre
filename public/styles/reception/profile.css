@@ -1,38 +1,59 @@
 .profile {
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
+
   border-bottom: solid rgba(0, 0, 0, 0.1) 1px;
   padding: 0.5rem;
+
   cursor: pointer;
+}
+
+.profile > * {
+  min-width: 0;
 }
 
 .profile-href {
   margin-left: auto;
-  margin-right: 1.5rem;
+  margin-right: clamp(0.75rem, 2vw, 1.5rem);
+
   text-decoration: none;
   color: var(--green);
   font-weight: 600;
+
+  flex-shrink: 0;
 }
 
 .profile-pic {
   width: 3.5rem;
   height: 3.5rem;
+  flex: 0 0 3.5rem;
+
   background-color: rgb(120, 196, 171);
+
   margin-right: 1rem;
-  margin-left: 2rem;
+  margin-left: clamp(0.75rem, 3vw, 2rem);
+
   border-radius: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: white;
   font-weight: 700;
   font-size: 1.3rem;
+
   box-shadow: var(--shad);
 }
 
 .profile-name {
   margin: 0 0 0.3rem 0;
+
+  overflow-wrap: anywhere;
 }
 
 .profile-date {
@@ -42,6 +63,61 @@
 
 .bookmark-svg {
   width: 30px;
-  margin-right: 3rem;
+  flex: 0 0 30px;
+
+  margin-right: clamp(0.75rem, 3vw, 3rem);
+
   fill: var(--green);
+}
+
+/* TABLET / MOBILE */
+@media (max-width: 650px) {
+  .profile {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .profile-pic {
+    width: 3rem;
+    height: 3rem;
+    flex-basis: 3rem;
+
+    margin: 0;
+
+    font-size: 1.1rem;
+  }
+
+  .profile-href {
+    margin-left: auto;
+    margin-right: 0;
+
+    font-size: 0.9rem;
+  }
+
+  .bookmark-svg {
+    width: 24px;
+    flex-basis: 24px;
+    margin-right: 0;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 420px) {
+  .profile {
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-basis: 2.75rem;
+  }
+
+  .profile-href {
+    margin-left: calc(2.75rem + 0.75rem);
+  }
+
+  .bookmark-svg {
+    margin-left: auto;
+  }
 }

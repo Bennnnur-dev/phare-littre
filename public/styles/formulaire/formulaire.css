@@ -1,124 +1,258 @@
 /* CSS COMMUN AVEC CONNEXION.HTML */
 
 body {
-  background-image: url("data:image/svg+xml,%3Csvg width='700' height='700' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='700' height='700' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%239C92AC' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
+/* ---------------- MAIN ---------------- */
+
 main {
-  padding: 3rem;
+  width: min(90%, 700px);
+
+  margin: clamp(2rem, 5vw, 4rem) auto clamp(4rem, 8vw, 8rem);
+
+  padding: clamp(1.5rem, 5vw, 3rem);
+
   background-color: var(--prim);
   box-shadow: var(--shad);
-  width: 35%;
-  margin: 4rem auto 8rem auto;
+
+  box-sizing: border-box;
 }
+
+/* ---------------- TITLE ---------------- */
 
 #form-title {
   color: var(--green);
-  font-size: 2.5rem;
+
+  font-size: clamp(2rem, 5vw, 2.5rem);
+
+  text-align: left;
 }
 
+/* ---------------- DESCRIPTION ---------------- */
+
 #form-desc {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
   color: var(--text);
   font-weight: 400;
+
   position: relative;
+
   margin-left: 1.5rem;
   margin-top: 2rem;
-  line-height: 1.5rem;
+
+  line-height: 1.5;
 }
 
 #form-desc::before {
   position: absolute;
+
   left: -1.5rem;
   top: -7px;
   bottom: -7px;
+
   width: 2px;
+
   content: "";
+
   background-color: var(--text);
+
   border-radius: 1rem;
   border: solid var(--text) 1px;
+
   opacity: 0.25;
 }
 
+/* ---------------- FORM ---------------- */
+
 form {
-  margin-top: 4rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
 }
 
 label,
 legend {
-  margin: 2rem 0 0.5rem 0;
+  margin: 2rem 0 0.5rem;
+
   font-weight: 700;
-  font-size: 1.1rem;
+
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
   display: block;
+
   color: var(--text);
 }
 
+/* IMPORTANT */
 input,
 textarea {
+  display: block;
+
   width: 100%;
+  max-width: 100%;
+
+  box-sizing: border-box;
+
   border: solid rgba(0, 0, 0, 0.1) 1px;
+
   border-radius: 0.5rem;
+
   outline: none;
-  height: 3rem;
-  padding-left: 0.5rem;
+
   font-size: 1rem;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
+
+input {
+  height: 3rem;
+
+  padding: 0 0.75rem;
+}
+
+textarea {
+  padding: 0.75rem;
+}
+
+/* ---------------- DATE ---------------- */
 
 #date-input {
   color: var(--text);
+
   font-family: Roboto, Arial, Helvetica, sans-serif;
+
   font-weight: 500;
-  width: 20%;
-  padding-right: 0.5rem;
+
+  /* Better than width: 20% */
+  width: min(100%, 230px);
 }
+
+/* ---------------- DESCRIPTION TEXTAREA ---------------- */
 
 #desc-input {
   min-height: 17rem;
+
   outline: none;
+
   overflow-wrap: break-word;
-  overflow: scroll;
-  resize: none;
+
+  /* Don't always display scrollbar */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  resize: vertical;
+
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  padding-top: 0.5rem;
 }
+
+/* ---------------- PLACEHOLDERS ---------------- */
 
 input::placeholder,
 textarea::placeholder {
   opacity: 0.7;
+
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+/* ---------------- BUTTON ---------------- */
+
 #button-wrapper {
   width: 100%;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   margin-top: 3rem;
 }
 
 #send-button {
   background-color: var(--green);
+
   border: none;
-  padding: 0.7rem 7rem;
+
+  padding: 0.8rem clamp(2rem, 10vw, 7rem);
+
   color: white;
+
   font-weight: 700;
+
   font-size: 1rem;
+
   box-shadow: var(--shad);
+
+  max-width: 100%;
 }
 
+/* ---------------- RADIOS ---------------- */
+
 input[type="radio"] {
+  display: inline-block;
+
   width: 1rem;
   height: 1rem;
 }
 
 .rad {
   display: inline;
+
   margin-right: 2rem;
 }
 
+/* ---------------- ERROR ---------------- */
+
 #err-msg {
   color: rgb(204, 91, 91);
+
   font-weight: 600;
+
   padding-top: 2rem;
+
   visibility: hidden;
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 800px) {
+  main {
+    width: min(92%, 650px);
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 2rem);
+
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    padding: 1.5rem;
+  }
+
+  #form-desc {
+    text-align: left;
+
+    margin-left: 1rem;
+  }
+
+  #form-desc::before {
+    left: -1rem;
+  }
+
+  #date-input {
+    width: 100%;
+  }
+
+  #desc-input {
+    min-height: 14rem;
+  }
+
+  #send-button {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+  }
 }

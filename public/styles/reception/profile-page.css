@@ -5,17 +5,27 @@ body {
 main {
   background-color: var(--prim);
   box-shadow: var(--shad);
-  width: 40%;
-  margin: 4rem auto 8rem auto;
+
+  width: clamp(36rem, 40vw, 52rem);
+  max-width: calc(100% - 2rem);
+
+  margin: clamp(2rem, 4vw, 4rem) auto clamp(4rem, 8vw, 8rem);
+
   min-height: 30rem;
+
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+
   position: relative;
+
   padding-bottom: 5rem;
+
+  box-sizing: border-box;
 }
 
 #upper-tab {
-  padding: 0.2rem 2rem;
+  padding: 0.4rem clamp(1rem, 4vw, 2rem);
+
   display: flex;
   align-items: center;
 }
@@ -24,7 +34,10 @@ main {
 #del-button {
   background: none;
   border: none;
+
   opacity: 0.8;
+
+  padding: 0.4rem;
 }
 
 #del-button {
@@ -33,100 +46,229 @@ main {
 
 #undo-button svg {
   fill: #7ca7d8;
-  width: 35px;
+
+  width: clamp(30px, 4vw, 35px);
 }
 
 #del-button svg {
   fill: brown;
-  width: 30px;
+
+  width: clamp(26px, 4vw, 30px);
 }
 
 #profile-head {
   padding: 1rem;
+
   border-top: solid rgb(230, 230, 230) 1px;
   border-bottom: solid rgb(230, 230, 230) 1px;
+
   display: flex;
-  align-items: start;
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  min-width: 0;
+}
+
+#profile-head > * {
+  min-width: 0;
 }
 
 #profile-info {
   display: flex;
   align-items: center;
+
+  min-width: 0;
 }
 
 #profile-pic {
   margin: 0 1rem 0 0;
+
+  flex-shrink: 0;
 }
 
 #config-area {
   margin-left: auto;
+
   display: flex;
-  align-items: start;
+  align-items: flex-start;
+
   gap: 0.5rem;
+
+  flex-shrink: 0;
 }
 
 #pin-button {
   background: none;
+
   border: solid var(--green) 1px;
   border-radius: 0.5rem;
+
   color: var(--green);
+
   display: flex;
   align-items: center;
-  padding: 0.2rem 0.7rem;
+
+  padding: 0.35rem 0.7rem;
+
   font-weight: 700;
   font-size: 0.9rem;
+
   margin-left: auto;
+
+  white-space: nowrap;
 }
 
 #pin-button svg {
   width: 20px;
+  flex: 0 0 20px;
+
   fill: var(--green);
+
   margin-right: 0.5rem;
 }
 
 #profile-body {
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem) 2rem;
 }
 
 .body-info {
   color: var(--text);
+
   font-weight: 600;
-  font-size: 1.1rem;
+
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
+  overflow-wrap: anywhere;
 }
 
 .body-info span {
   color: black;
+
+  overflow-wrap: anywhere;
 }
 
 #body-desc {
   position: relative;
+
   margin-top: 2rem;
-  font-size: 1.1rem;
+
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
   padding-left: 1.3rem;
-  line-height: 1.5rem;
+
+  line-height: 1.5;
+
   overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 #body-desc::before {
   position: absolute;
-  left: 0rem;
+
+  left: 0;
   top: -7px;
   bottom: -7px;
+
   width: 2px;
+
   content: "";
+
   background-color: var(--text);
+
   border-radius: 1rem;
   border: solid var(--text) 1px;
+
   opacity: 0.25;
 }
 
 #err-msg {
   position: absolute;
+
   bottom: 1rem;
-  left: 2rem;
-  right: 2rem;
+  left: clamp(1rem, 4vw, 2rem);
+  right: clamp(1rem, 4vw, 2rem);
+
   color: rgb(204, 91, 91);
+
   font-weight: 600;
+
   padding-top: 2rem;
+
   visibility: hidden;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+  main {
+    width: min(92%, 44rem);
+    max-width: none;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 1.5rem);
+
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+
+    border-radius: 0.75rem 0.75rem 0 0;
+
+    padding-bottom: 4.5rem;
+  }
+
+  #upper-tab {
+    padding: 0.4rem 0.75rem;
+  }
+
+  #profile-head {
+    flex-direction: column;
+
+    padding: 1rem;
+  }
+
+  #profile-info {
+    width: 100%;
+  }
+
+  #config-area {
+    width: 100%;
+
+    margin-left: 0;
+
+    justify-content: flex-end;
+  }
+
+  #profile-body {
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 420px) {
+  #profile-info {
+    align-items: flex-start;
+  }
+
+  #profile-pic {
+    margin-right: 0.75rem;
+  }
+
+  #config-area {
+    justify-content: stretch;
+  }
+
+  #pin-button {
+    width: 100%;
+
+    justify-content: center;
+
+    margin-left: 0;
+  }
+
+  #body-desc {
+    padding-left: 1rem;
+  }
 }
