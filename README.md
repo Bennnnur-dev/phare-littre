@@ -3,3 +3,4 @@
 - Régler node_env (variable d'environement) en "prod" une fois en production
 - Emails envoyés sur Gmail à l'adresse benjaminaxcell@gmail.com venant de benjaminaxcell@gmail.com --> Possibilité de changer en production
 - Configurer les utilisateurs autorisés à accéder à la récéption dans INSERT_USER.js --> NE PAS COMMIT EN PRODUCTION AVEC DES VRAIES VALEURS
+- Possibilité de modifier politique de confidentialité et mentions légales
