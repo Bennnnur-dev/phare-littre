@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  host: process.env.EMAIL_HOST,
   port: 465,
   secure: true,
   auth: {
@@ -20,7 +20,7 @@ async function sendEmail(req, res, next) {
 
     await transporter.sendMail({
       from: '"Phare Littré" <pharelittre@gmail.com>',
-      to: "benjaminaxcell@gmail.com",
+      to: process.env.EMAIL_USER,
       subject: "Signalement harcèlement PHARE Littré",
       html: `
       <table
