@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentions légales</title>
 
-    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/general.css" />
-    <link rel="stylesheet" href="./styles/reception/reception.css" />
-    <link rel="stylesheet" href="./styles/reception/profile.css" />
-    <link rel="stylesheet" href="./styles/reception/profile-page.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/legal/legal.css" />
 
     <link rel="icon" href="./media/logo.png" />
-    <title>Profile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -25,37 +28,25 @@
         />
       </a>
       <nav>
-        <a class="header-tab" href="reception.html">RETOUR</a>
-        <a class="header-tab" id="connect-a" href="connexion.html "
-          >CONNEXION</a
-        >
+        <a class="header-tab" href="reception.html">RECEPTION</a>
+        <a class="header-tab" href="formulaire.html">SIGNALEMENT</a>
+        <a class="header-tab" id="connect-a" href="connexion.html">CONNEXION</a>
       </nav>
     </header>
 
     <main>
-      <section id="upper-tab">
-        <a href="/reception.html">
-          <button id="undo-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-              <path
-                d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
-              />
-            </svg>
-          </button>
-        </a>
-        <button id="del-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-            <path
-              d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
-            />
-          </svg>
-        </button>
-      </section>
-
-      <section id="profile-head"></section>
-      <section id="profile-body"></section>
-
-      <p id="err-msg">Erreur inconnue</p>
+      <p>
+        Éditeur du site : Lycée Littré, situé à Bd Pasteur, 50300 Avranches,
+        France, joignable à ce.0500002f@ac-normandie.fr. <br />
+        Hébergement : METTRE HEBERGEMENT, situé à ADRESSE DE L'HEBERGEUR. <br />
+        Propriété intellectuelle : sauf mention contraire, les contenus présents
+        sur ce site sont la propriété du lycée Emile Littré et ne peuvent être
+        reproduits ou réutilisés sans autorisation. <br />
+        Pour toute information concernant la collecte et le traitement des
+        données personnelles, consultez notre Politique de confidentialité.
+        <br />
+        Site développé par Benjamin Axcell
+      </p>
     </main>
 
     <footer>
@@ -107,7 +98,6 @@
       </div>
     </footer>
 
-    <script src="./scripts/profile.js"></script>
     <script src="./scripts/logout.js"></script>
   </body>
 </html>

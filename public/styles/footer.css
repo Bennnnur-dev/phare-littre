@@ -65,10 +65,12 @@ footer a {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-#credits {
+#credits,
+#credits a {
   color: white;
   font-weight: 200;
   padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
 /* TABLETTE */
